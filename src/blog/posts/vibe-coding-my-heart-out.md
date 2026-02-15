@@ -17,11 +17,11 @@ I know people's opinions on AI are all over the place right now. Well, not reall
 
 Well first and foremost, this site. I used to have my own little static site I threw together which was pretty enough, honestly for being totally handmade it was pretty solid. But I wanted to find a place to land that had:
 - Speed
-- Adjustable page
+- Adjustable pages
 - Ease of use
 - <mark>SECURE</mark>
 
-A static site generator seemed like a nice way to handle that. Nothing but GET requests, nothing but static files I'm fine with you seeing. Powered by one-shotted vibe coded page. What you all don't see on this site is an additional page accessible only on my local machine, <mark>*editor*</mark>. A text to markdown editor page utilizing the CSS nad JS from this main site. I can type and submit a blog post just like you'd expect from a commercial product. **THIS** is the type of usage where AI shines. Not shoving it in front of every website because you want to save your company a few bucks on customer support, or to stay ahead of the trend.
+A static site generator seemed like a nice way to handle that. Nothing but GET requests, nothing but static files I'm fine with you seeing. Powered by a one-shotted vibe coded page. What you all don't see on this site is an additional page accessible only on my local machine, <mark>*editor*</mark>. A text to markdown editor page utilizing the CSS nad JS from this main site. I can type and submit a blog post just like you'd expect from a commercial product. **THIS** is the type of usage where AI shines. Not shoving it in front of every website because you want to save your company a few bucks on customer support, or to stay ahead of the trend.
 
 ![editor.webp](/img/blog/editor.webp)
 > I mean come on. that's sick.
