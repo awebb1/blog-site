@@ -141,12 +141,12 @@
 
 .tag:hover {
   background: var(--accent);
-  color: #fff;
+  color: #0f0f0f;
 }
 
 .tag--active {
   background: var(--accent);
-  color: #fff;
+  color: #0f0f0f;
 }
 
 .posts-empty {
@@ -341,13 +341,13 @@ pre:hover .copy-btn {
 
 .copy-btn:hover {
   background: var(--accent);
-  color: #fff;
+  color: #0f0f0f;
   border-color: var(--accent);
 }
 
 .copy-btn--copied {
   background: var(--accent);
-  color: #fff;
+  color: #0f0f0f;
   border-color: var(--accent);
   opacity: 1;
 }

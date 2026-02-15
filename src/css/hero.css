@@ -122,12 +122,12 @@
 
 .btn--primary {
   background: var(--accent);
-  color: #fff;
+  color: #0f0f0f;
 }
 
 .btn--primary:hover {
   background: var(--accent-hover);
-  color: #fff;
+  color: #0f0f0f;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(196, 131, 155, 0.3);
 }
