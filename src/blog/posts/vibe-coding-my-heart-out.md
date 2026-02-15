@@ -21,10 +21,10 @@ Well first and foremost, this site. I used to have my own little static site I t
 - Ease of use
 - <mark>SECURE</mark>
 
-A static site generator seemed like a nice way to handle that. Nothing but GET requests, nothing but static files I'm fine with you seeing. Powered by a one-shotted vibe coded page. What you all don't see on this site is an additional page accessible only on my local machine, <mark>*editor*</mark>. A text to markdown editor page utilizing the CSS nad JS from this main site. I can type and submit a blog post just like you'd expect from a commercial product. **THIS** is the type of usage where AI shines. Not shoving it in front of every website because you want to save your company a few bucks on customer support, or to stay ahead of the trend.
+A static site generator seemed like a nice way to handle that. Nothing but GET requests, nothing but static files I'm fine with you seeing. Powered by a one-shotted vibe coded page. What you all don't see on this site is an additional page accessible only on my local machine, <mark>*editor*</mark>. A text to markdown editor page utilizing the CSS and JS from this main site. I can type and submit a blog post just like you'd expect from a commercial product. **THIS** is the type of usage where AI shines. Not shoving it in front of every website because you want to save your company a few bucks on customer support, or to stay ahead of the trend.
 
 ![editor.webp](/img/blog/editor.webp)
-> I mean come on. that's sick.
+> I mean come on. that's sick. (ignore the typos thanks.)
 
 ### Other Projects
 Really whatever comes to my mind. I'll have some dedicated posts regarding my study tool, and my AI hacking assistant, but the fast solution creating nature of it has been game changing. Nmap scans to CSV. CORS compliant python HTTP servers. DNS rebinding scripts. Am I using it to make art? Not really, I mean the main splash image on here *is* AI generated. But it's not a common occurrence. So I definitely see where people's issues lie, and I am not claiming to be above some hypocrisy here. But there *is* value in it.
