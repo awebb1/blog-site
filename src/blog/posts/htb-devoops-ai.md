@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-DevOops is a medium difficulty box with a vulnerable python library. This is a unique write-up (one the ones blocked by Medium) fully done by AI. The actual solving of the machine and hacking was performed by a tool I have been developing the last couple of months. Minimal human interference was needed, the interference that **DID** happen, was mainly working around application infra that hardstuck the agents, like creating a file and hanging commands. These were mostly done to save my wallet as this is a passion project funded straight from my own bank account.
+DevOops is a medium difficulty box with a vulnerable python library. This is a unique write-up (one of the ones blocked by Medium) fully done by AI. The actual solving of the machine and hacking was performed by a tool I have been developing the last couple of months. Minimal human interference was needed, the interference that **DID** happen, was mainly working around application infra that hardstuck the agents, like creating a file and hanging commands. These were mostly done to save my wallet as this is a passion project funded straight from my own bank account.
 
 **Difficulty**: Medium
 **OS**: Linux
