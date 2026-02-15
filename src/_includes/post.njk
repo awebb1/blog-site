@@ -1,0 +1,28 @@
+---
+layout: base.njk
+---
+<link rel="stylesheet" href="/css/blog.css">
+<link rel="stylesheet" href="/css/prism-override.css">
+
+<article class="post">
+  <header class="post__header">
+    <a href="/blog/" class="post__back">&larr; Back to Blog</a>
+    <h1 class="post__title">{{ title }}</h1>
+    <div class="post__meta">
+      <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>
+      {% if tags %}
+      <div class="post__tags">
+        {%- for tag in tags -%}
+          {%- if tag != "post" -%}
+          <a href="/blog/tags/{{ tag }}/" class="tag">{{ tag }}</a>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+    </div>
+  </header>
+  <div class="post__content">
+    {{ content | safe }}
+  </div>
+</article>
+<script src="/js/copy.js"></script>

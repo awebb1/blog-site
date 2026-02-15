@@ -1,0 +1,43 @@
+---
+layout: base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: /blog/tags/{{ tag }}/
+eleventyComputed:
+  title: "Posts tagged \"{{ tag }}\""
+---
+<link rel="stylesheet" href="/css/blog.css">
+
+<section class="blog-page">
+  <div class="blog-page__inner">
+    <p class="blog-page__label">// tag: {{ tag }}</p>
+    <h1 class="blog-page__title">{{ tag }}</h1>
+    <p class="blog-page__desc"><a href="/blog/" class="blog-page__back">&larr; All posts</a></p>
+
+    <div class="posts-grid">
+      {%- for post in collections.posts -%}
+        {%- if tag in post.data.tags -%}
+        <div class="post-card">
+          <p class="post-card__date">{{ post.date | readableDate }}</p>
+          <h2 class="post-card__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+          {% if post.data.excerpt %}
+          <p class="post-card__excerpt">{{ post.data.excerpt }}</p>
+          {% endif %}
+          {% if post.data.tags %}
+          <div class="post-card__tags">
+            {%- for t in post.data.tags -%}
+              {%- if t != "post" -%}
+              <a href="/blog/tags/{{ t }}/" class="tag{% if t == tag %} tag--active{% endif %}">{{ t }}</a>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+          {% endif %}
+          <a href="{{ post.url }}" class="post-card__read">Read more &rarr;</a>
+        </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
