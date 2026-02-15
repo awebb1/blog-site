@@ -1,5 +1,5 @@
 ---
-title: "HTB DevOops: From Uploads to Root"
+title: "AI Hacks HTB DevOops: From Uploads to Root"
 date: 2026-02-14
 excerpt: "A walkthrough of the HackTheBox Keeper machine. Default credentials, KeePass memory dumps, and a straightforward path to root."
 tags:
