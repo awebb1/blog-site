@@ -138,10 +138,12 @@ h3 { font-size: var(--fs-xl); }
   color: #0f0f0f;
 }
 
-.light-mode ::selection {
-  color: #fff;
+*::selection {
+  background: var(--accent);
+  color: #0f0f0f;
 }
 
+.light-mode ::selection,
 .light-mode *::selection {
   color: #fff;
 }
