@@ -10,6 +10,11 @@ eleventyExcludeFromCollections: true
     <link>{{ site.url }}</link>
     <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
+    <image>
+      <url>{{ site.url }}/img/favicon.svg</url>
+      <title>{{ site.title }}</title>
+      <link>{{ site.url }}</link>
+    </image>
     <lastBuildDate>{% if collections.posts.length %}{{ collections.posts[0].date | rfc822Date }}{% endif %}</lastBuildDate>
     {%- for post in collections.posts.slice(0, 20) %}
     <item>
