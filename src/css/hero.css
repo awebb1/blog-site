@@ -215,6 +215,24 @@
   transition: background-color var(--transition), border-color var(--transition), color var(--transition);
 }
 
+.about__certs {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  align-items: center;
+}
+
+.about__cert {
+  height: 80px;
+  width: auto;
+  border-radius: var(--radius);
+  transition: transform var(--transition);
+}
+
+.about__cert:hover {
+  transform: scale(1.05);
+}
+
 .about__visual {
   display: flex;
   justify-content: center;
