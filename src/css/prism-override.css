@@ -75,7 +75,7 @@ pre[class*="language-"] {
 .light-mode .token.comment,
 .light-mode .token.prolog,
 .light-mode .token.doctype,
-.light-mode .token.cdata { color: #a0a1a7; }
+.light-mode .token.cdata { color: #6a6a6a; }
 
 .light-mode .token.property,
 .light-mode .token.tag,

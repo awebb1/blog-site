@@ -191,6 +191,14 @@
   background-clip: text;
 }
 
+.post__title::selection {
+  -webkit-text-fill-color: #0f0f0f;
+}
+
+.light-mode .post__title::selection {
+  -webkit-text-fill-color: #fff;
+}
+
 .post__meta {
   display: flex;
   align-items: center;
@@ -269,6 +277,10 @@
   color: var(--text-secondary);
   font-style: italic;
   transition: background-color var(--transition), color var(--transition);
+}
+
+.post__content blockquote p:last-child {
+  margin-bottom: 0;
 }
 
 .post__content code {

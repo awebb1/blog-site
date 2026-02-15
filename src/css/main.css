@@ -75,7 +75,7 @@
   --accent-hover: #73304e;
   --accent-glow: rgba(139, 58, 94, 0.12);
   --text-primary: #2a2a2a;
-  --text-secondary: #666666;
+  --text-secondary: #555555;
   --text-heading: #1a1a1a;
   --border: #e0e0e0;
   --code-bg: #f4f4f4;
@@ -135,6 +135,14 @@ h3 { font-size: var(--fs-xl); }
 
 ::selection {
   background: var(--accent);
+  color: #0f0f0f;
+}
+
+.light-mode ::selection {
+  color: #fff;
+}
+
+.light-mode *::selection {
   color: #fff;
 }
 

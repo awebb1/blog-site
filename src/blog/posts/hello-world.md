@@ -19,10 +19,7 @@ This is a static site. Posts are just markdown files in a folder using 11ty to g
 
 ```bash
 # Write a post
-vim src/blog/posts/my-new-post.md
-
-# Build
-npx @11ty/eleventy
+editor
 
 # Deploy (auto build via Netlify on push)
 git add . && git commit -m "new post" && git push
@@ -47,4 +44,4 @@ Mostly things that interest me:
 - **Projects** — If I worked on something neat. I'll share it with you.
 - **AI** — The big wave baby. I've been getting into it myself. It helped me generate this site template and I've been learning to hack them in my free time.
 
-If any of that sounds interesting, stick around. Nothing fancy. Just bookmark the page like it's 2005.
+If any of that sounds interesting, stick around. Nothing fancy. Just bookmark the page like it's 2005 or add me to your [RSS feed](https://alexdoesthings.dev/feed.xml)

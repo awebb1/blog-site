@@ -31,6 +31,10 @@ module.exports = function (eleventyConfig) {
     return new Date(dateObj).toISOString();
   });
 
+  eleventyConfig.addFilter("rfc822Date", (dateObj) => {
+    return new Date(dateObj).toUTCString();
+  });
+
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   eleventyConfig.addTransform("wrapTables", function (content) {

@@ -90,6 +90,14 @@
   background-clip: text;
 }
 
+.hero__title span::selection {
+  -webkit-text-fill-color: #0f0f0f;
+}
+
+.light-mode .hero__title span::selection {
+  -webkit-text-fill-color: #fff;
+}
+
 .hero__subtitle {
   font-size: var(--fs-lg);
   color: var(--text-secondary);
