@@ -6,11 +6,15 @@
   <title>{{ title | default(site.title) }}</title>
   <meta name="description" content="{{ description | default(site.description) }}">
   <meta name="author" content="{{ site.author }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0f0f0f">
+  <meta property="og:title" content="{{ title | default(site.title) }}">
+  <meta property="og:description" content="{{ description | default(site.description) }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="twitter:card" content="summary">
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/nav.css">
   {% block head %}{% endblock %}
   <script>
     (function() {
@@ -24,7 +28,7 @@
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a href="/" class="nav__logo">alex<span>doesthings</span></a>
+      <a href="/" class="nav__logo">alex<span>DoesThings</span></a>
       <ul class="nav__links">
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
@@ -62,7 +66,7 @@
     </div>
   </footer>
 
-  <script src="/js/nav.js"></script>
-  <script src="/js/theme.js"></script>
+  <script src="/js/nav.js" defer></script>
+  <script src="/js/theme.js" defer></script>
 </body>
 </html>
