@@ -2,7 +2,243 @@
 layout: base.njk
 title: Pentester. Coder. Gamer.
 ---
-<link rel="stylesheet" href="/css/hero.css">
+{% block head %}
+<style>
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3xl) var(--space-md) var(--space-2xl);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero__inner {
+  max-width: var(--max-width);
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+.hero__content { width: 100%; }
+.hero__image { position: relative; min-height: 100%; }
+.hero__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  mask-image: linear-gradient(to left, #000 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, #000 60%, transparent 100%);
+}
+.hero__label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--accent);
+  margin-bottom: var(--space-md);
+  letter-spacing: 0.05em;
+}
+.hero__title {
+  font-size: var(--fs-hero);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: var(--space-md);
+}
+.hero__title span {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero__subtitle {
+  font-size: var(--fs-lg);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: var(--space-xl);
+  line-height: 1.5;
+}
+.hero__actions {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+  border: none;
+}
+.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary:hover {
+  background: var(--accent-hover);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(196, 131, 155, 0.3);
+}
+.btn--outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+.btn--outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+.btn__arrow { transition: transform var(--transition); }
+.btn:hover .btn__arrow { transform: translateX(4px); }
+.about {
+  padding: var(--space-3xl) var(--space-md);
+  background: var(--bg-secondary);
+  transition: background-color var(--transition);
+}
+.about__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+.about__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+  letter-spacing: 0.05em;
+}
+.about__title { font-size: var(--fs-2xl); margin-bottom: var(--space-lg); }
+.about__text {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  line-height: 1.7;
+}
+.about__topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-lg);
+}
+.about__topic {
+  padding: 0.4rem 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+}
+.about__visual { display: flex; justify-content: center; align-items: center; }
+.about__terminal {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  width: 100%;
+  max-width: 480px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  transition: background-color var(--transition), border-color var(--transition);
+}
+.terminal__bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border);
+}
+.terminal__dot { width: 12px; height: 12px; border-radius: 50%; }
+.terminal__dot--red { background: #ff5f57; }
+.terminal__dot--yellow { background: #febc2e; }
+.terminal__dot--green { background: #28c840; }
+.terminal__line { margin-bottom: 0.5rem; color: var(--text-secondary); }
+.terminal__line .prompt { color: var(--accent); }
+.terminal__line .cmd { color: var(--text-heading); }
+.terminal__cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: var(--accent);
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+}
+@keyframes blink { 50% { opacity: 0; } }
+.contact { padding: var(--space-3xl) var(--space-md); }
+.contact__inner { max-width: var(--content-width); margin: 0 auto; text-align: center; }
+.contact__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+  letter-spacing: 0.05em;
+}
+.contact__title { font-size: var(--fs-2xl); margin-bottom: var(--space-md); }
+.contact__text { color: var(--text-secondary); margin-bottom: var(--space-xl); line-height: 1.7; }
+.contact__links { display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap; }
+.contact__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  transition: all var(--transition);
+}
+.contact__link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__image { order: -1; }
+  .hero__image img { max-height: 300px; }
+  .about__inner { grid-template-columns: 1fr; gap: var(--space-xl); }
+  .about__visual { order: -1; }
+  .hero__actions { flex-direction: column; align-items: flex-start; }
+}
+</style>
+{% endblock %}
 
 <section class="hero">
   <div class="hero__inner">
@@ -20,7 +256,7 @@ title: Pentester. Coder. Gamer.
       </div>
     </div>
     <div class="hero__image">
-      <img src="/img/hero.webp" alt="Illustration of a person coding at a desk" width="1536" height="1024" loading="eager" fetchpriority="high">
+      <img src="/img/hero.webp" alt="Illustration of a person coding at a desk" width="768" height="512" loading="eager" fetchpriority="high">
     </div>
   </div>
 </section>
